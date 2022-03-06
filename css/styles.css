@@ -356,12 +356,14 @@ main p{
 	z-index: 2;
 	opacity: 0;
 	box-shadow: 2px 2px 7px var(--dark);
-	transition: opacity .4s, box-shadow 1.3s;
+	transition: opacity .4s, box-shadow 1.3s, transform .7s;
 	border-radius: 10%;
 	color: var(--white);
+	transform: scale(0.5);
 }
 
 .catalogo .tarjeta:hover > .info{
+	transform: scale(1.0);
 	opacity: 1;
 	cursor: default;
 	box-shadow: 4px 4px 22px var(--dark);
@@ -454,6 +456,7 @@ main p{
 
 .vision:hover, .mision:hover, .que-hacemos:hover{
 	outline: 3px solid var(--cyan);
+	cursor: default;
 }
 
 .vision:hover .cabecera, .mision:hover .cabecera, .que-hacemos:hover .cabecera{
@@ -602,6 +605,10 @@ main p{
 	stroke-dashoffset: 0;
 }
 
+/*---------------------Clientes------------------*/
+
+
+
 /*-----------------------Footer----------------------*/
 
 footer{
@@ -609,7 +616,7 @@ footer{
 	display: flex;
 	flex-direction: column;
 	font-family: var(--signika);
-	padding: 2em 2em 1em 2em;
+	padding: 2em 2em 1em 2.1em;
 	box-shadow: inset 0px -1px 15px var(--dark);
 }
 
@@ -718,6 +725,10 @@ footer .autor i{
 
 .p-2{
 	padding: 2em;
+}
+
+.m-3{
+ margin: 3em;
 }
 
 /*---------------------Animaciones---------------------*/
