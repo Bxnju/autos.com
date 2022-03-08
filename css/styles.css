@@ -607,7 +607,27 @@ main p{
 
 /*---------------------Clientes------------------*/
 
+.clientes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3em 3em;
+	flex-direction: column;
+	font-family: var(--signika);
+}
 
+.clientes h2{
+	margin-bottom: 2em;
+}
+
+#info{
+	
+}
+
+.nombre{
+	background: var(--black);
+	color: #fff;
+}
 
 /*-----------------------Footer----------------------*/
 

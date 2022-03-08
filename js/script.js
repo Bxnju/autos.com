@@ -1,21 +1,43 @@
+window.onload = api();
 
 function api(){
   fetch('https://randomuser.me/api/')
   .then(response => response.json())
-  .then(data => procesarRespuesta(data));
+  .then(data => {
+  const user = data.results[0];
+  console.log(user);
+  displayUser(user);
+})
 }
 
-function procesarRespuesta(datos){
+function displayUser(user){
 
-  let titulo = datos.results[0].name.title;
-  let nombre = datos.results[0].name.first;
-  let apellido = datos.results[0].name.last;
-  let genero = datos.results[0].gender;
-  let pais = datos.results[0].location.country;
-  let email = datos.results[0].email;
-  let foto = datos.results[0].picture.large;
+ const info = document.getElementById('info');
 
-  document.write(`La persona seleccionada al azar es ${nombre} ${apellido}, es un@ ${genero} de ${pais} y su email es ${email} <br><br> Esta es su foto: <br><br> <img src="${foto}" width="256" />`)
+ let titulo = user.name.title;
+  let nombre = user.name.first;
+  let apellido = user.name.last;
+  let telefono = user.phone;
+  let pais = user.location.country;
+  let email = user.email;
+  let foto = user.picture.large;
+
+
+  info.innerHTML= `
+  <h3 class="nombre">
+    ${nombre} ${apellido}
+  </h3> 
+
+  <div class="email">
+    ${email}
+  </div>
+  <div class="pais">
+    ${pais}
+  </div>  
+  <div class="telefono">
+    ${telefono}
+  </div>  
+    <img class="foto" src="${foto}" width="256" />`;
 
 
 }
