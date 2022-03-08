@@ -609,6 +609,9 @@ main p{
 
 .clientes{
 	display: flex;
+	background: url('https://i.pinimg.com/originals/26/7a/02/267a02585c50e30245e11a5f75c2e487.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
 	justify-content: center;
 	align-items: center;
 	padding: 3em 3em;
@@ -616,18 +619,73 @@ main p{
 	font-family: var(--signika);
 }
 
-.clientes h2{
-	margin-bottom: 2em;
+
+.clientes .tarjeta #info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-#info{
+.tarjeta-info{
+	background: linear-gradient(
+		125deg, var(--cyan), #5200D8);
+	padding: 2em 3em 4em 3em;
+	border-radius: 5%;
+	width: 25em;
+}
+
+.clientes .tarjeta-info #info .foto{
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	display: flex;
+	box-shadow: 3px 3px 30px var(--black);
+}
+
+.clientes #info{
 	
 }
 
-.nombre{
-	background: var(--black);
-	color: #fff;
+.clientes .nombre{
+	text-shadow: 4px 4px 2px var(--black);
+	color: var(--white);
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 1em;
 }
+
+.clientes .email{
+	background: var(--dark);
+	color: var(--white);
+	text-align: center;
+	padding: 0.5em;
+	border-radius: 10px;
+	box-shadow:
+	4px 4px 10px var(--black);
+	margin-bottom: 1em;
+}
+
+.clientes .pais{
+	background: var(--dark);
+	color: var(--white);
+	text-align: center;
+	padding: 0.5em;
+	border-radius: 10px;
+	box-shadow:
+	4px 4px 10px var(--black);
+	margin-bottom: 1em;
+}
+
+.clientes .telefono{
+	background: var(--dark);
+	color: var(--white);
+	text-align: center;
+	padding: 0.5em;
+	border-radius: 10px;
+	box-shadow:
+	4px 4px 10px var(--black);
+	margin-bottom: 1em;
+}	
 
 /*-----------------------Footer----------------------*/
 
@@ -720,7 +778,7 @@ footer .autor i{
 
 /*------------------Estilos universales----------------*/
 
-.btn{
+.btn, .btn-1{
 	text-decoration: none;
 	color: var(--white);
 	border-radius: 20px;
@@ -728,15 +786,20 @@ footer .autor i{
 	transition: .4s;
 	border: none;
 	font-family: var(--signika);
+	cursor: pointer;
 }
 
 .btn:hover{
 	background: #0270B3;
-	cursor: pointer;
 }
 
 .cyan{
 	background: var(--cyan);
+}
+
+.linear-gradient{
+	background: linear-gradient(
+		125deg, var(--cyan), #5200D8);
 }
 
 .p-1{

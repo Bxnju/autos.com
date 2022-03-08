@@ -6,7 +6,9 @@ function api(){
   .then(data => {
   const user = data.results[0];
   console.log(user);
+  
   displayUser(user);
+
 })
 }
 
@@ -24,20 +26,21 @@ function displayUser(user){
 
 
   info.innerHTML= `
-  <h3 class="nombre">
+   <img class="foto" src="${foto}" width="128" />
+  <h2 class="nombre">
     ${nombre} ${apellido}
-  </h3> 
+  </h2> 
 
   <div class="email">
-    ${email}
+    <i class="fas fa-envelope"></i> Email: ${email}
   </div>
   <div class="pais">
-    ${pais}
+   <i class="fas fa-flag"></i>  Pais: ${pais}
   </div>  
   <div class="telefono">
-    ${telefono}
+    <i class="fas fa-phone"></i> Telefono: ${telefono}  
   </div>  
-    <img class="foto" src="${foto}" width="256" />`;
+   `;
 
 
 }
