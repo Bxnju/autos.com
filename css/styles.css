@@ -724,7 +724,7 @@ main p{
 
 .clientes .mensaje:hover{
 	transform: scale(1.1);
-	text-shadow: -6px 6px 1px var(--black);
+	text-shadow: -7px 7px 1px var(--black);
 }
 
 .clientes .botones{
