@@ -639,7 +639,7 @@ main p{
 	box-shadow: 
 	inset 5px 5px 10px var(--black),
 	inset -5px 5px 20px var(--black),
-	inset -5px 5px 10px var(--black),
+	inset -5px 5px 11px var(--black),
 	1px 1px 10px var(--black);
 	display: flex;
 	align-items: center;
