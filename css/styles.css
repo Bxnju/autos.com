@@ -611,7 +611,7 @@ main p{
 
 .clientes{
 	display: flex;
-	background: url('');
+	background: url('../imgs/fondo-clientes.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	justify-content: center;
@@ -643,7 +643,6 @@ main p{
 	1px 1px 10px var(--black);
 	display: flex;
 	align-items: center;
-
 }
 
 .clientes .tarjeta-info #info .foto{
