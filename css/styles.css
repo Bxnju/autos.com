@@ -643,6 +643,7 @@ main p{
 	1px 1px 10px var(--black);
 	display: flex;
 	align-items: center;
+	cursor: default;
 }
 
 .clientes .tarjeta-info #info .foto{
@@ -708,6 +709,24 @@ main p{
 	color: var(--white);
 }
 
+.clientes .mensaje{
+	position: absolute;
+	font-size: 3em;
+	font-family: var(--bebas);
+	font-weight: 800;
+	left: 10%;
+	top: 30%;
+	color: var(--cyan);
+	text-shadow: -1px 1px 1px var(--black);
+	transition: .4s;
+	cursor: default;
+}
+
+.clientes .mensaje:hover{
+	transform: scale(1.1);
+	text-shadow: -6px 6px 1px var(--black);
+}
+
 .clientes .botones{
 	position: absolute;
 	left: 70%;
@@ -715,6 +734,8 @@ main p{
 	flex-direction: column;
 	gap: 2em;
 }
+
+
 
 /*-----------------------Footer----------------------*/
 
