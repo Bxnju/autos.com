@@ -818,6 +818,14 @@ footer .autor i{
 	cursor: pointer;
 }
 
+.btn-1{
+	padding: 1.5em 2.5em;
+}
+
+.btn-1:hover{
+	transform: scale(1.1);
+}
+
 .btn-1 i{
 	font-size: 1.5em;
 	margin-right: 1em;
@@ -832,7 +840,6 @@ footer .autor i{
 }
 
 .linear-gradient{
-	transform: scale(1.2);
 	background: linear-gradient(
 		125deg, var(--cyan), #5200D8);
 }
@@ -909,3 +916,4 @@ footer .autor i{
 		opacity: .5;
 	}
 }
+
