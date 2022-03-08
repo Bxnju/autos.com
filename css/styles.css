@@ -14,6 +14,8 @@
 	--black: #000;
 	--cyan: #0684D0;
 	--transparent-black: rgba(0,0,0, 0.4);
+	--gradient: linear-gradient(
+		125deg, var(--cyan), #5200D8);
 }
 
 ::selection{
@@ -609,7 +611,7 @@ main p{
 
 .clientes{
 	display: flex;
-	background: url('https://i.pinimg.com/originals/26/7a/02/267a02585c50e30245e11a5f75c2e487.gif');
+	background: url('');
 	background-repeat: no-repeat;
 	background-size: cover;
 	justify-content: center;
@@ -631,19 +633,30 @@ main p{
 		125deg, var(--cyan), #5200D8);
 	padding: 2em 3em 4em 3em;
 	border-radius: 5%;
-	width: 25em;
+	width: 22em;
+	height: 33em;
+	outline: 5px solid var(--dark);
+	box-shadow: 
+	inset 5px 5px 10px var(--black),
+	inset -5px 5px 20px var(--black),
+	inset -5px 5px 10px var(--black),
+	1px 1px 10px var(--black);
+	display: flex;
+	align-items: center;
+
 }
 
 .clientes .tarjeta-info #info .foto{
 	border-radius: 50%;
 	margin: 0 auto;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	display: flex;
 	box-shadow: 3px 3px 30px var(--black);
+	animation: agrandar 0.5s ease-in;
 }
 
 .clientes #info{
-	
+	width: 100%;
 }
 
 .clientes .nombre{
@@ -651,7 +664,8 @@ main p{
 	color: var(--white);
 	text-align: center;
 	border-radius: 10px;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+	animation: agrandar 1s ease-in-out;
 }
 
 .clientes .email{
@@ -663,6 +677,7 @@ main p{
 	box-shadow:
 	4px 4px 10px var(--black);
 	margin-bottom: 1em;
+	animation: agrandar 1s ease-out;
 }
 
 .clientes .pais{
@@ -674,6 +689,7 @@ main p{
 	box-shadow:
 	4px 4px 10px var(--black);
 	margin-bottom: 1em;
+	animation: agrandar 1s ease-out;
 }
 
 .clientes .telefono{
@@ -685,7 +701,21 @@ main p{
 	box-shadow:
 	4px 4px 10px var(--black);
 	margin-bottom: 1em;
-}	
+	animation: agrandar 1s ease-out;
+}
+
+.clientes .years{
+	margin-top: 2em;
+	color: var(--white);
+}
+
+.clientes .botones{
+	position: absolute;
+	left: 70%;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
 
 /*-----------------------Footer----------------------*/
 
@@ -789,6 +819,11 @@ footer .autor i{
 	cursor: pointer;
 }
 
+.btn-1 i{
+	font-size: 1.5em;
+	margin-right: 1em;
+}
+
 .btn:hover{
 	background: #0270B3;
 }
@@ -798,6 +833,7 @@ footer .autor i{
 }
 
 .linear-gradient{
+	transform: scale(1.2);
 	background: linear-gradient(
 		125deg, var(--cyan), #5200D8);
 }
@@ -848,6 +884,16 @@ footer .autor i{
 		opacity: 0;
 	}to{
 		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes agrandar{
+	from{
+		transform: scale(1.2);
+		opacity: 0;
+	}to{
+		transform: scale(1.0);
 		opacity: 1;
 	}
 }

@@ -23,6 +23,7 @@ function displayUser(user){
   let pais = user.location.country;
   let email = user.email;
   let foto = user.picture.large;
+  let years = user.registered.age;
 
 
   info.innerHTML= `
@@ -39,7 +40,9 @@ function displayUser(user){
   </div>  
   <div class="telefono">
     <i class="fas fa-phone"></i> Telefono: ${telefono}  
-  </div>  
+  </div>
+  <div class="years"> Cliente desde hace ${years} años.
+  </div>
    `;
 
 
