@@ -83,7 +83,6 @@ html::-webkit-scrollbar-thumb {
 	width: 100px;
 	transform: scaleX(-1);
 	filter: drop-shadow(4px 4px 4px var(--black));
-	filter: ;
 	animation: rodar 4s ease-in infinite;
 }
 
