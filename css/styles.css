@@ -11,6 +11,7 @@
 	--nunito: nunito-sans, sans-serif;;
 	--dark: #222;
 	--white: #fff;
+	--blanco-perla: #f9f9f9;
 	--black: #000;
 	--cyan: #0684D0;
 	--transparent-black: rgba(0,0,0, 0.4);
@@ -83,6 +84,7 @@ html::-webkit-scrollbar-thumb {
 	width: 100px;
 	transform: scaleX(-1);
 	filter: drop-shadow(4px 4px 4px var(--black));
+	filter: ;
 	animation: rodar 4s ease-in infinite;
 }
 
@@ -151,6 +153,48 @@ header nav li:hover a{
 	text-shadow: 9px 5px 2px var(--black);
 }
 
+.cuerpo-clientes{
+	background: var(--blanco-perla);
+}
+
+.clearfix{
+	clear: both;
+}
+
+@media only screen and (max-width: 1000px){
+	header{
+		flex-direction: column;
+	}
+
+	header nav{
+		flex-direction: column;
+	}
+
+	.mensaje{
+		text-align: center;
+	}
+
+	footer .contenido{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
+
+@media only screen and (min-width: 1000px){
+
+	.mensaje{
+		position: absolute;
+	}
+
+	.mensaje:hover{
+	transform: scale(1.1);
+	text-shadow: -7px 7px 1px var(--black);
+}
+
+}
 /*----------Main-------*/
 
 main{
@@ -708,8 +752,8 @@ main p{
 	color: var(--white);
 }
 
-.clientes .mensaje{
-	position: absolute;
+.mensaje{
+	margin-top: 2em;
 	font-size: 3em;
 	font-family: var(--bebas);
 	font-weight: 800;
@@ -721,11 +765,6 @@ main p{
 	cursor: default;
 }
 
-.clientes .mensaje:hover{
-	transform: scale(1.1);
-	text-shadow: -7px 7px 1px var(--black);
-}
-
 .clientes .botones{
 	position: absolute;
 	left: 70%;
@@ -734,6 +773,57 @@ main p{
 	gap: 2em;
 }
 
+/*-----------------------Creadores----------------------*/
+
+.creadores{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 5em 3em;
+	font-family: var(--nunito);
+	background: linear-gradient(var(--transparent-black), var(--transparent-black)), url(../imgs/fondo-creadores.jpg);
+	background-size: cover;
+	color: var(--white);
+}
+
+.creadores h1{
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.creadores ul{
+	margin-bottom: 1em;
+	cursor: default;
+}
+
+.creadores ul li{
+	list-style: circle;
+	margin-bottom: 1em;
+	font-size: 1.3em;
+	position: relative;
+}
+
+.creadores ul li span{
+	position: absolute;
+	list-style: circle;
+	z-index: 2;
+	margin-left: 0.5em;
+	top: -1em;
+	width: 9em;
+	border-radius: 10px;
+	padding: 1em 1em;
+	color: var(--black);
+	background: var(--white);
+	transition: .7s;
+	transform: scale(0.9);
+	opacity: 0;
+}
+
+.creadores ul li:hover span{
+	opacity: 1;
+	transform: scale(1);
+}
 
 
 /*-----------------------Footer----------------------*/
@@ -840,6 +930,8 @@ footer .autor i{
 
 .btn-1{
 	padding: 1.5em 2.5em;
+	box-shadow: 2px 4px 10px #090909;
+
 }
 
 .btn-1:hover{
