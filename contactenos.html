@@ -17,6 +17,8 @@
 	<title>Autos.com &vert; Contáctanos!</title>
 	<!--Style.css-->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--navbar-responsive.js-->
+	<script type="text/javascript" src="js/navbar.js"></script>
 </head>
 <div class="carro">
 	<span class="calle"></span>
@@ -26,14 +28,18 @@
 	<a href="index.html">
 		<img src="imgs/logo.png" class="logo">
 	</a>
-	<nav>
+	<nav id="myTopnav" class="topnav">
 		<li><a href="index.html">Inicio</a></li>
 		<li><a href="catalogo.html">Catálogo</a></li>
 		<li><a href="acerca-de.html">Acerca De</a></li>
 		<li><a href="contactenos.html">Contáctenos</a></li>
 		<li><a href="clientes.html">Clientes</a></li>
 	</nav>
+	<a href="javascript:void(0);" class="icono" onclick="navbar()"><i class="fas fa-chevron-circle-down"></i></a>
 </header>
+
+<div class="clearfix"></div>
+
 <body>
 	<section id="contacto">
 

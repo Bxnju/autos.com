@@ -157,44 +157,7 @@ header nav li:hover a{
 	background: var(--blanco-perla);
 }
 
-.clearfix{
-	clear: both;
-}
 
-@media only screen and (max-width: 1000px){
-	header{
-		flex-direction: column;
-	}
-
-	header nav{
-		flex-direction: column;
-	}
-
-	.mensaje{
-		text-align: center;
-	}
-
-	footer .contenido{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-}
-
-@media only screen and (min-width: 1000px){
-
-	.mensaje{
-		position: absolute;
-	}
-
-	.mensaje:hover{
-	transform: scale(1.1);
-	text-shadow: -7px 7px 1px var(--black);
-}
-
-}
 /*----------Main-------*/
 
 main{
@@ -969,6 +932,122 @@ footer .autor i{
  margin: 3em;
 }
 
+.clearfix{
+	clear: both;
+}
+
+
+/*---------------------Media Queries---------------------*/
+
+
+@media only screen and (max-width: 1000px){
+	header{
+		flex-direction: row;
+		padding: 0 3.5em;
+	}
+
+	header .topnav{
+		font-size: 1.5em;
+		width: 50vw;
+		text-align: center;
+		height: 100vh;
+		overflow: auto;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background: var(--dark);
+		flex-direction: column;
+		display: none;
+		transition: .5s;
+		z-index: 6;
+	}
+
+	header .topnav li a{
+		position: relative;
+	}
+
+	header .topnav li a::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 0%;
+		height: 5px;
+		background: var(--cyan);
+		transition: .4s;
+	}
+
+	header .topnav li:hover a{
+		text-shadow: none;
+	}
+
+	header .topnav li:hover a::before{
+		width: 100%;
+	}
+
+	header .responsive{
+		display: block;
+		animation: entrar 1s ease-in;
+	}
+
+	header .icono{
+		font-size: 2em;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: var(--white);
+	}
+
+	.mensaje{
+		text-align: center;
+	}
+
+	footer .contenido{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer .contenido div{
+		margin-bottom: 2em;
+	}
+
+	footer .contenido .noticias{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+	}
+
+	footer .contenido .links{
+		flex-direction: row;
+		font-size: 1em;
+		gap: 0.7em;
+	}
+
+
+
+}
+
+@media only screen and (min-width: 1000px){
+
+	.mensaje{
+		position: absolute;
+	}
+
+	.mensaje:hover{
+	transform: scale(1.1);
+	text-shadow: -7px 7px 1px var(--black);
+	}
+
+	header .icono{
+		display: none;
+	}
+
+}
+
+
+
 /*---------------------Animaciones---------------------*/
 
 @keyframes rodar{
@@ -1027,6 +1106,15 @@ footer .autor i{
 	}100%{
 		transform: translateY(-20px);
 		opacity: .5;
+	}
+}
+
+@keyframes desaparecer{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
 	}
 }
 
