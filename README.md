@@ -1,7 +1,5 @@
-La pagina Clientes ha sido creado por: 
-
-- ANDRES BENJUMEA REINOSO --- UPB ID: 000491320
-- JUAN ANDRÉS PORRAS VÉLEZ --- UPB ID: 000466893
-- JESUS ALBERTO DIAS --- UPB ID: 000492846
-
-
+Este es un proyecto realizado para el curso de Introduccion a la Ingenieria en Sistemas.
+Fue hecho por Andres Benjumea Reinoso
+Contacto: 
+Correo: benjumea.andres.112@gmail.com
+Celular: +57 3023344972
